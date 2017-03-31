@@ -14,7 +14,14 @@ import { ForumsService } from './services/forums.service';
 
 const forumsRoutes: Routes = [
   { path: 'forums', component: ForumsComponent },
-  { path: 'forums/:forum_alias', component: ForumComponent }
+  { 
+    path: 'forums/:forum_alias', 
+    component: ForumComponent,
+    children: [
+      { path: '', component: ThreadsComponent },
+      { path: ':thread_alias', component: ThreadComponent }
+    ]
+  }
 ];
 
 @NgModule({
