@@ -11,6 +11,6 @@
     </div>
   </div>
   <div class="card-footer">
-    <a class="btn btn-sm btn-link btn-primary" *ngIf="talkTo">Start Chat with {{talkTo}}</a>
+    <a class="btn btn-sm btn-link btn-primary" *ngIf="talkTo" [routerLink]="[talkTo]">Start Chat with {{talkTo}}</a>
   </div>
 </div>
